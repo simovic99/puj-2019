@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knjiznica.controller.KorisnickeRezervacijeController">
+   <children>
+      <TableView fx:id="tablica" prefHeight="415.0" prefWidth="650.0">
+        <columns>
+          <TableColumn fx:id="nazivKnjige" prefWidth="131.0" text="Naziv" />
+          <TableColumn fx:id="autorKnjige" prefWidth="157.0" text="Autor" />
+            <TableColumn fx:id="vrstaKnjige" prefWidth="134.0" text="Vrsta" />
+            <TableColumn fx:id="datumOd" prefWidth="110.0" text="Datum od" />
+            <TableColumn fx:id="datumDo" prefWidth="115.0" text="Datum do" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

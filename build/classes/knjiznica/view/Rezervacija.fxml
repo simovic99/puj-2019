@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knjiznica.controller.RezervacijaController">
+   <children>
+      <TableView fx:id="tablica" layoutX="-1.0" prefHeight="400.0" prefWidth="414.0">
+        <columns>
+          <TableColumn fx:id="idKnjige" minWidth="2.0" prefWidth="26.0" text="Id" visible="false" />
+          <TableColumn fx:id="nazivKnjige" prefWidth="133.0" text="Naziv" />
+          <TableColumn fx:id="autorKnjige" prefWidth="148.0" text="Autor" />
+          <TableColumn fx:id="vrstaKnjige" prefWidth="129.0" text="Vrsta" />
+          <TableColumn fx:id="statusKnjige" prefWidth="90.0" text="Status" visible="false" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="datumOd" layoutX="431.0" layoutY="100.0" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker fx:id="datumDo" layoutX="431.0" layoutY="164.0" />
+      <Button layoutX="530.0" layoutY="226.0" mnemonicParsing="false" onAction="#rezervirajKnjigu" text="Rezerviraj" />
+      <Label layoutX="431.0" layoutY="70.0" text="Datum od:" />
+      <Label layoutX="431.0" layoutY="140.0" text="Datum do:" />
+      <Label fx:id="label" layoutX="431.0" layoutY="302.0" />
+   </children>
+</AnchorPane>

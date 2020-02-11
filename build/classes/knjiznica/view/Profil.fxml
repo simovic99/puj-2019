@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knjiznica.controller.ProfilController">
+   <children>
+      <TextField fx:id="imeKorisnika" layoutX="22.0" layoutY="61.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="prezimeKorisnika" layoutX="22.0" layoutY="164.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="emailKorisnika" layoutX="321.0" layoutY="257.0" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker fx:id="datumKorisnika" layoutX="22.0" layoutY="257.0" />
+      <Label layoutX="22.0" layoutY="38.0" text="Ime:" />
+      <Label layoutX="23.0" layoutY="141.0" text="Prezime:" />
+      <Label layoutX="27.0" layoutY="231.0" text="Datum rođenja:" />
+      <Label layoutX="321.0" layoutY="38.0" text="Lozinka:" />
+      <Label layoutX="321.0" layoutY="141.0" text="Potvrdite lozinku:" />
+      <Label layoutX="321.0" layoutY="231.0" text="Email:" />
+      <Button layoutX="505.0" layoutY="341.0" mnemonicParsing="false" onAction="#spremiPromjene" text="Spremi" />
+      <PasswordField fx:id="lozinka1" layoutX="321.0" layoutY="61.0" prefHeight="25.0" prefWidth="174.0" />
+      <PasswordField fx:id="lozinka2" layoutX="321.0" layoutY="164.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label fx:id="status" layoutX="364.0" layoutY="400.0" />
+   </children>
+</AnchorPane>

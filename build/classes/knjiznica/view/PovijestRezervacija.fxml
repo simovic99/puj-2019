@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knjiznica.controller.PovijestRezervacijaController">
+   <children>
+      <TableView fx:id="tablica" prefHeight="400.0" prefWidth="650.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="25.0" text="Id" />
+          <TableColumn fx:id="korisnickoIme" prefWidth="116.0" text="Korisnicko ime" />
+          <TableColumn fx:id="nazivKnjige" prefWidth="158.0" text="Naziv knjige" />
+            <TableColumn fx:id="autorKnjige" minWidth="0.0" prefWidth="162.0" text="Autor" />
+            <TableColumn fx:id="datumOd" minWidth="0.0" prefWidth="91.0" text="Datum od" />
+            <TableColumn fx:id="datumDo" prefWidth="94.0" text="Datum do" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

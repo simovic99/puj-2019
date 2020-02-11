@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="border_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knjiznica.controller.AdminController">
+   <left>
+      <SplitPane prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="autori" layoutX="12.0" layoutY="38.0" mnemonicParsing="false" onAction="#ucitajAutore" prefHeight="64.0" prefWidth="167.0" text="Autori" />
+                  <Button fx:id="knjige" layoutX="12.0" layoutY="117.0" mnemonicParsing="false" onAction="#ucitajKnjige" prefHeight="64.0" prefWidth="167.0" text="Knjige" />
+                  <Button fx:id="clanovi" layoutX="11.0" layoutY="199.0" mnemonicParsing="false" onAction="#ucitajClanove" prefHeight="64.0" prefWidth="167.0" text="Članovi" />
+                  <Button fx:id="odjava" layoutX="132.0" layoutY="359.0" mnemonicParsing="false" onAction="#odjaviSe" text="Odjava" />
+                  <Button layoutX="11.0" layoutY="279.0" mnemonicParsing="false" onAction="#ucitajRezervacije" prefHeight="64.0" prefWidth="167.0" text="Povijest rezervacija" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </left>
+</BorderPane>

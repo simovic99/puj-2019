@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="659.0" prefWidth="660.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knjiznica.controller.ClanoviController">
+  <tabs>
+    <Tab onSelectionChanged="#izlistajClanove" text="Izlistaj Članove">
+         <content>
+            <Pane prefHeight="381.0" prefWidth="660.0">
+               <children>
+                  <TableView fx:id="tablica" layoutX="-1.0" prefHeight="288.0" prefWidth="660.0">
+                    <columns>
+                        <TableColumn fx:id="idClan" prefWidth="23.0" text="Id" />
+                      <TableColumn fx:id="imeClan" prefWidth="99.0" text="Ime" />
+                      <TableColumn fx:id="prezimeClan" prefWidth="106.0" text="Prezime" />
+                        <TableColumn fx:id="datum_rodjenjaClan" prefWidth="122.0" text="Datum rođenja" />
+                        <TableColumn fx:id="korisnicko_imeClan" prefWidth="131.0" text="Korisničko ime" />
+                        <TableColumn fx:id="emailClan" prefWidth="175.0" text="Email" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="495.0" layoutY="303.0" mnemonicParsing="false" onAction="#ucitajUpdateClan" text="Uredi" />
+                  <Button layoutX="32.0" layoutY="302.0" mnemonicParsing="false" onAction="#izbrisiClana" text="Izbriši" />
+                  <AnchorPane fx:id="urediClana" layoutX="9.0" layoutY="327.0" prefHeight="301.0" prefWidth="639.0" visible="false">
+                     <children>
+                        <Label layoutX="266.0" layoutY="6.0" prefHeight="33.0" prefWidth="86.0" text="Uredi člana:" />
+                        <Label layoutX="14.0" layoutY="59.0" text="Ime:" />
+                        <Label layoutX="14.0" layoutY="127.0" text="Prezime:" />
+                        <Label layoutX="14.0" layoutY="198.0" text="Datum rođenja:" />
+                        <Label layoutX="404.0" layoutY="59.0" text="Korisničko ime:" />
+                        <Label layoutX="404.0" layoutY="127.0" text="Email:" />
+                        <TextField fx:id="updateImeClana" layoutX="14.0" layoutY="76.0" />
+                        <TextField fx:id="updatePrezimeClana" layoutX="14.0" layoutY="144.0" />
+                        <TextField fx:id="updateKorImeClana" layoutX="404.0" layoutY="76.0" />
+                        <TextField fx:id="updateEmailClana" layoutX="404.0" layoutY="144.0" />
+                        <Button layoutX="559.0" layoutY="228.0" mnemonicParsing="false" onAction="#azurirajClan" text="Spremi" />
+                        <TextField fx:id="updateId" layoutX="14.0" layoutY="23.0" visible="false" />
+                        <TextField fx:id="updateLozinkaClana" layoutX="22.0" layoutY="253.0" visible="false" />
+                        <DatePicker fx:id="updateDatumClana" layoutX="14.0" layoutY="216.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </content>
+      </Tab>
+    <Tab text="Dodaj Člana">
+         <content>
+            <Pane prefHeight="380.0" prefWidth="660.0">
+               <children>
+                  <TextField fx:id="imeClana" layoutX="14.0" layoutY="41.0" prefHeight="25.0" prefWidth="164.0" promptText="Unesite ime" />
+                  <Label layoutX="15.0" layoutY="19.0" text="Ime:" />
+                  <Label layoutX="15.0" layoutY="130.0" text="Prezime:" />
+                  <TextField fx:id="prezimeClana" layoutX="14.0" layoutY="151.0" prefHeight="25.0" prefWidth="167.0" promptText="Unesite prezime" />
+                  <Label layoutX="19.0" layoutY="231.0" text="Datum rođenja:" />
+                  <DatePicker fx:id="datumClana" layoutX="14.0" layoutY="252.0" prefHeight="25.0" prefWidth="193.0" promptText="Odaberite datum" />
+                  <Button fx:id="spremiClana" layoutX="475.0" layoutY="283.0" mnemonicParsing="false" onAction="#spremiClana" text="Spremi" />
+                  <Label layoutX="282.0" layoutY="19.0" text="Korisničko ime:" />
+                  <TextField fx:id="korImeClana" layoutX="282.0" layoutY="41.0" prefHeight="25.0" prefWidth="169.0" promptText="Unesite korisnicko ime" />
+                  <Label layoutX="282.0" layoutY="130.0" text="Lozinka:" />
+                  <Label layoutX="282.0" layoutY="231.0" text="Email:" />
+                  <TextField fx:id="emailClana" layoutX="283.0" layoutY="252.0" prefHeight="25.0" prefWidth="174.0" promptText="Unesite email" />
+                  <Label fx:id="status" layoutX="26.0" layoutY="342.0" />
+                  <TextField fx:id="lozinkaClana" layoutX="282.0" layoutY="151.0" promptText="Unesite lozinku" />
+               </children>
+            </Pane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

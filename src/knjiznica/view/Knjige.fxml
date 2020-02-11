@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="660.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="knjiznica.controller.KnjigeController">
+  <tabs>
+    <Tab onSelectionChanged="#izlistajKnjige" text="Izlistaj knjige">
+         <content>
+            <Pane prefHeight="456.0" prefWidth="660.0">
+               <children>
+                  <TableView fx:id="tablica" prefHeight="247.0" prefWidth="660.0">
+                    <columns>
+                      <TableColumn fx:id="idKnjiga" prefWidth="49.0" text="Id" />
+                      <TableColumn fx:id="nazivKnjiga" prefWidth="171.0" text="Naziv" />
+                        <TableColumn fx:id="autorKnjiga" prefWidth="179.66665649414062" text="Autor" />
+                        <TableColumn fx:id="vrstaKnjiga" prefWidth="166.66668701171875" text="Vrsta" />
+                        <TableColumn fx:id="statusKnjiga" prefWidth="89.33331298828125" text="Status" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="14.0" layoutY="263.0" mnemonicParsing="false" onAction="#izbrisiKnjigu" text="Izbriši" />
+                  <Button layoutX="293.0" layoutY="263.0" mnemonicParsing="false" onAction="#ucitajUpdateKnjiga" text="Uredi" />
+                  <AnchorPane fx:id="urediKnjigu" layoutX="3.0" layoutY="303.0" prefHeight="293.0" prefWidth="559.0" visible="false">
+                     <children>
+                        <Label layoutX="207.0" layoutY="14.0" text="Uredi knjigu:" />
+                        <Label layoutX="23.0" layoutY="58.0" text="Naziv:" />
+                        <Label layoutX="24.0" layoutY="139.0" text="Vrsta:" />
+                        <TextField fx:id="updateNazivKnjige" layoutX="24.0" layoutY="75.0" prefHeight="25.0" prefWidth="222.0" />
+                        <TextField fx:id="updateVrstaKnjige" layoutX="25.0" layoutY="160.0" prefHeight="25.0" prefWidth="221.0" />
+                        <Button layoutX="439.0" layoutY="197.0" mnemonicParsing="false" onAction="#azurirajKnjigu" text="Spremi" />
+                        <TextField fx:id="updateIdKnjige" layoutX="386.0" layoutY="54.0" prefHeight="25.0" prefWidth="68.0" visible="false" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="549.0" layoutY="263.0" mnemonicParsing="false" onAction="#vratiKnjigu" text="Vrati Knjigu" />
+                  <Label fx:id="label" layoutX="405.0" layoutY="318.0" />
+               </children>
+            </Pane>
+         </content>
+    </Tab>
+    <Tab onSelectionChanged="#popuniListu" text="Dodaj knjigu">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="29.0" layoutY="32.0" prefHeight="22.0" prefWidth="44.0" text="Naziv:" />
+                  <TextField fx:id="nazivKnjige" layoutX="29.0" layoutY="54.0" prefHeight="25.0" prefWidth="214.0" promptText="Unesite naziv knjige" />
+                  <Label layoutX="29.0" layoutY="106.0" prefHeight="23.0" prefWidth="38.0" text="Autor:" />
+                  <ComboBox fx:id="autorList" layoutX="29.0" layoutY="136.0" onAction="#dohvatiId" prefHeight="25.0" prefWidth="211.0" promptText="Odaberite Autora" />
+                  <Label layoutX="29.0" layoutY="179.0" prefHeight="32.0" prefWidth="37.0" text="Vrsta:" />
+                  <TextField fx:id="vrstaKnjige" layoutX="29.0" layoutY="211.0" prefHeight="25.0" prefWidth="211.0" promptText="Unesite vrstu knjige" />
+                  <Button layoutX="240.0" layoutY="273.0" mnemonicParsing="false" onAction="#spremiKnjigu" text="Spremi" />
+                  <TextField fx:id="IdAutora" layoutX="285.0" layoutY="148.0" visible="false" />
+                  <Label fx:id="status" layoutX="26.0" layoutY="410.0" />
+               </children></Pane>
+         </content>
+    </Tab>
+  </tabs>
+</TabPane>
